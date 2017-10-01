@@ -41,7 +41,7 @@ class BatchFile:
     def writeBatchFile(self, batchfilename, source, destination):
         outputfile = open(batchfilename, "w")
         outputfile.write('@echo off' + '\n'
-                         + 'robocopy "' + source + '" "' + destination + '" ' + '/MIR')
+                         + 'robocopy "' + source + '" "' + destination + '" ' + '/MIR /R:1')
         outputfile.close()
 
     # Reads existing batchfile if it exists and stores the source and destination directories in the variable previous
